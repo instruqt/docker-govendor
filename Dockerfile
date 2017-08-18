@@ -1,7 +1,6 @@
 FROM golang:alpine
-MAINTAINER Dan Richards <dan.richards@lush.co.uk>
 
-RUN apk add --no-cache git openssl bzr \
+RUN apk add --no-cache git openssl openssh-client \
     && go get -u github.com/kardianos/govendor
 
 ENTRYPOINT ["govendor"]
